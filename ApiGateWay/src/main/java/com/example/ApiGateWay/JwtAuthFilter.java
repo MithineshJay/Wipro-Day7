@@ -30,7 +30,7 @@ public class JwtAuthFilter extends AbstractGatewayFilterFactory<JwtAuthFilter.Co
 
     @Override
     public GatewayFilter apply(Config config) {
-        return (exchange, chain) -> {
+        return ((exchange, chain) -> )return-> {
             String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
 
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
